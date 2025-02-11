@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Угадай число</title>
+</head>
+<body>
+    <h1>Добро пожаловать на игру "Угадай число" :)</h1>
+    <div class="container">
+        <div id="start">
+            <h2>Введите диапазон чисел</h2>
+            <p>
+                <label for="minRange">Минимальное значение:</label>
+                <input type="number" id="minRange" required>
+            </p>
+            <p>
+                <label for="maxRange">Максимальное значение:</label>
+                <input type="number" id="maxRange" required>
+            </p>
+            <button id="startGame">Начать игру</button>
+        </div>
+
+        <div id="playGame" style="display: none;">
+            <h2>Угадайте число!</h2>
+            <p>
+                <input type="number" id="userGuess" placeholder="Введите ваше число" required>  
+            </p>
+            
+            <button id="checkGuess">Проверить</button>
+            <p id="message"></p>
+            <p>Осталось попыток: <span id="attemptsLeft"></span></p>
+        </div>
+        
+        <div id="endGame" style="display: none;">
+            <h2>Игра окончена!</h2>
+            <p id="finalMessage"></p>
+            <button id="restartGame">Начать заново</button>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
