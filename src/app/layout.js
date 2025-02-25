@@ -6,19 +6,17 @@ export default function RootLayout({ children }) {
       <body className="bg-gray-50">
         <header className="shadow-md py-6">
           <div className="container mx-auto text-center">
-            <li href="/">
-              <h1 className="text-4xl font-bold">Фото выставка</h1>
-            </li>
+            <h1 className="text-4xl font-bold">Фото-выставка ♥</h1>
             <nav className="mt-4">
               <ul className="flex justify-center space-x-6">
-                <li>
-                  <a href="/registr" className="hover:underline">Регистрация</a>
-                </li>
                 <li>
                   <a href="/login" className="hover:underline">Вход</a>
                 </li>
                 <li>
-                  <a href="/" className="hover:underline">Поиск</a>
+                  <a href="/registr" className="hover:underline">Регистрация</a>
+                </li>
+                <li>
+                  <a href="/auth/search" className="hover:underline">Поиск</a>
                 </li>
                 <li>
                   <a href="/" className="hover:underline">Профиль</a>

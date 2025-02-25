@@ -1,8 +1,8 @@
 'use client';
-
-import "../globals.css";
+import { useRouter } from "next/navigation";
 
 const Home = () => {
+    const router = useRouter();
     const handleRegister = async (event) => {
         event.preventDefault();
       
@@ -28,6 +28,7 @@ const Home = () => {
         const data = await response.json();
         if (response.ok) { 
             alert(data.message);
+            router.push('/login');
         } else {
             alert(data.message);
         }

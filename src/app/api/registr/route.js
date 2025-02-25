@@ -1,4 +1,3 @@
-// src/app/api/registr/route.js
 import db from '../../../../lib/db';
 import bcrypt from 'bcryptjs';
 
