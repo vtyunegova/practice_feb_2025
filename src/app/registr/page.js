@@ -35,7 +35,7 @@ const Home = () => {
     };
 
     return (
-        <div className="max-w-md mx-auto mt-10 p-6 border border-gray-300 rounded shadow">
+        <div className="max-w-md mx-auto mt-10 p-6 border border-gray-100 rounded shadow-lg">
             <h2 className="text-2xl font-semibold text-center mb-6">Регистрация</h2>
             <form onSubmit={handleRegister} className="space-y-4">
                 <div>
@@ -53,7 +53,7 @@ const Home = () => {
                     <input type="password" id="confirmPassword" name="confirmPassword" required className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:outline" />
                 </div>
                 
-                <button type="submit" className="w-full bg-blue-500 text-white py-2 rounded-md hover:bg-blue-600">Зарегистрироваться</button>
+                <button type="submit" className="w-full bg-[#e94196] text-white py-2 rounded-md hover:bg-pink-600">Зарегистрироваться</button>
             </form>
         </div>
     );

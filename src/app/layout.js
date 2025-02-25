@@ -1,34 +1,35 @@
 import "./globals.css";
+import Link from "next/link";
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className="bg-gray-50">
+      <body className="flex flex-col min-h-screen">
         <header className="shadow-md py-6">
           <div className="container mx-auto text-center">
-            <h1 className="text-4xl font-bold">Фото-выставка ♥</h1>
-            <nav className="mt-4">
-              <ul className="flex justify-center space-x-6">
-                <li>
-                  <a href="/login" className="hover:underline">Вход</a>
+            <h1 className="text-4xl font-bold">୨୧ Фотовыставка ୨୧</h1>
+          </div>
+        </header>
+        <nav className="my-6">
+              <ul className="flex justify-center space-x-24">
+              <li>
+                  <Link href="/" className="hover:underline text-lg">Главная</Link>
                 </li>
                 <li>
-                  <a href="/registr" className="hover:underline">Регистрация</a>
+                  <Link href="/login" className="hover:underline text-lg">Вход</Link>
                 </li>
                 <li>
-                  <a href="/auth/search" className="hover:underline">Поиск</a>
+                  <Link href="/auth/search" className="hover:underline text-lg">Поиск</Link>
                 </li>
                 <li>
-                  <a href="/" className="hover:underline">Профиль</a>
+                  <Link href="" className="hover:underline text-lg">Профиль</Link>
                 </li>
               </ul>
             </nav>
-          </div>
-        </header>
-        <main className="container mx-auto px-4 py-6">
+        <main className="flex-grow px-6">
           {children}
         </main>
-        <footer className="py-4 mt-6">
+        <footer className="py-4 bg-gray-200 mt-8">
           <div className="container mx-auto text-center">
             <p className="text-gray-600">© 2025 Valera Ezh</p>
           </div>

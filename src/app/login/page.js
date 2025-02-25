@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 
 const LoginForm = () => {
   const [email, setEmail] = useState('');
@@ -30,7 +31,7 @@ const LoginForm = () => {
 };
 
     return (
-        <div className="max-w-md mx-auto mt-10 p-6 border border-gray-300 rounded shadow">
+        <div className="max-w-md mx-auto mt-10 p-6 border border-gray-100 rounded shadow-lg">
             <h2 className="text-2xl font-semibold text-center mb-6">Авторизация</h2>
             <form onSubmit={handleLogin} className="space-y-4">
                 <div>
@@ -57,7 +58,11 @@ const LoginForm = () => {
                     className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:outline" />
                 </div>
                 
-                <button type="submit" className="w-full bg-blue-500 text-white py-2 rounded-md hover:bg-blue-600">Войти</button>
+                <button type="submit" className="w-full bg-[#e94196] text-white py-2 rounded-md hover:bg-pink-600">Войти</button>
+                <p className='text-center'>
+                  Еще не зарегистрированы?  
+                  <Link href="/registr" className='text-[#e94196] hover:underline'> Вам сюда</Link>
+                </p>
             </form>
         </div>
     );
