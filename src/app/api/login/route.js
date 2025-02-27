@@ -1,4 +1,3 @@
-// src/app/api/signin/route.js
 import db from '../../../../lib/db';
 import bcrypt from 'bcryptjs';
 import { NextResponse } from 'next/server';
@@ -27,7 +26,7 @@ export async function POST(request) {
     const jwtToken = await new SignJWT({ email: user[0].email }) 
         .setProtectedHeader({ alg: 'HS256' }) // алгоритм
         .setIssuedAt() // время создания
-        .setExpirationTime('1h') // время истечения токена
+        .setExpirationTime('1d') // время истечения токена
         .sign(encodedKey); // подпись токена
 
     // устанавливаем токен в куки

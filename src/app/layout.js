@@ -22,7 +22,7 @@ export default function RootLayout({ children }) {
                   <Link href="/auth/search" className="hover:underline text-lg">Поиск</Link>
                 </li>
                 <li>
-                  <Link href="" className="hover:underline text-lg">Профиль</Link>
+                  <Link href="/auth/person" className="hover:underline text-lg">Профиль</Link>
                 </li>
               </ul>
             </nav>
